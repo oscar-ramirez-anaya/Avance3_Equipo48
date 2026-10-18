@@ -1,0 +1,75 @@
+# ---- Datos del proyecto (confidenciales, no se versionan) ----
+data/raw/*
+data/planogram/*
+data/processed/*
+!data/raw/.gitkeep
+!data/planogram/.gitkeep
+!data/processed/.gitkeep
+
+# Formatos de imagen, video y anotación, en cualquier ubicación
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# ---- Credenciales y configuración local ----
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+service-account*.json
+secrets/
+
+# ---- Resultados de experimentos (se quedan en el servidor de Bnext) ----
+outputs/
+results/
+artifacts/
+reports_private/
+*.csv
+*.parquet
+*.zip
+*.npy
+*.npz
+*.pkl
+*.joblib
+
+# ---- Artefactos de modelos ----
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+runs/
+weights/
+mlruns/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# ---- Sistema operativo y editores ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Recursos gráficos institucionales de los entregables (no son datos de Bnext)
+!assets/*.png
+
+# Gráficas agregadas del entregable (sin fotografías ni recortes)
+!figuras/*.png

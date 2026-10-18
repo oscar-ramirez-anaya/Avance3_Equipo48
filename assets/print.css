@@ -1,0 +1,355 @@
+/* Avance 0. Propuesta de proyecto y firma de convenios - TC5035.10 Proyecto Integrador
+   Equipo 48. Hoja de estilo de impresion (A4). */
+@page {
+  size: A4;
+  margin: 22mm 20mm 24mm 20mm;
+}
+
+:root {
+  --azul: #0b3b8c;
+  --azul-tabla: #1346bd;
+  --gris-texto: #1c1c1c;
+  --gris-suave: #5a5a5a;
+  --linea: #c9ced6;
+  --fondo-nota: #f3f6fb;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--gris-texto);
+  text-align: justify;
+  hyphens: auto;
+}
+
+h1, h2, h3, .sans {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+  hyphens: none;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  height: 247mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  page-break-after: always;
+}
+
+.portada-encabezado {
+  padding-top: 6mm;
+}
+
+.portada .institucion {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin: 0;
+}
+
+.portada .programa {
+  font-size: 11pt;
+  color: var(--gris-suave);
+  margin: 3mm 0 0 0;
+}
+
+.portada .curso {
+  font-size: 11pt;
+  margin: 1.5mm 0 0 0;
+  color: var(--gris-suave);
+}
+
+.regla {
+  border: 0;
+  border-top: 2px solid var(--azul);
+  width: 38mm;
+  margin: 7mm auto;
+}
+
+.portada .etiqueta {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gris-suave);
+  margin: 0 0 4mm 0;
+}
+
+.portada .titulo {
+  font-size: 20pt;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--azul);
+  margin: 0 auto;
+  max-width: 150mm;
+  text-align: center;
+}
+
+.portada .subtitulo {
+  font-size: 11.5pt;
+  font-style: italic;
+  color: var(--gris-suave);
+  margin: 6mm auto 0 auto;
+  max-width: 140mm;
+  text-align: center;
+}
+
+.portada .equipo {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--gris-texto);
+  margin: 0 0 5mm 0;
+}
+
+.integrantes {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 120mm;
+}
+
+.integrantes li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted var(--linea);
+  padding: 1.6mm 0;
+  font-size: 10.5pt;
+  text-align: left;
+}
+
+.integrantes .matricula {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9.5pt;
+  color: var(--gris-suave);
+  white-space: nowrap;
+  padding-left: 8mm;
+}
+
+.portada-pie {
+  font-size: 9.5pt;
+  color: var(--gris-suave);
+  padding-bottom: 4mm;
+}
+
+.portada-pie p { margin: 1mm 0; }
+
+/* ---------- Cuerpo ---------- */
+
+h2 {
+  font-size: 12.5pt;
+  color: var(--azul);
+  margin: 9mm 0 3mm 0;
+  padding-bottom: 1.5mm;
+  border-bottom: 1px solid var(--linea);
+  page-break-after: avoid;
+}
+
+h2:first-of-type { margin-top: 0; }
+
+h3 {
+  font-size: 10.5pt;
+  color: var(--gris-texto);
+  margin: 5mm 0 2mm 0;
+  page-break-after: avoid;
+}
+
+p { margin: 0 0 3mm 0; }
+
+ul, ol { margin: 0 0 3mm 0; padding-left: 6mm; }
+li { margin-bottom: 1.2mm; }
+
+strong { color: #000; }
+
+a { color: var(--azul); text-decoration: none; word-break: break-all; }
+
+.mono {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 9pt;
+}
+
+/* ---------- Tablas ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3mm 0 4mm 0;
+  font-size: 9.5pt;
+  page-break-inside: auto;
+}
+
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; }
+
+th {
+  background: var(--azul-tabla);
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  font-weight: 600;
+  text-align: left;
+  padding: 2.2mm 2.5mm;
+  border: 1px solid var(--azul-tabla);
+}
+
+td {
+  border: 1px solid var(--linea);
+  padding: 2.2mm 2.5mm;
+  vertical-align: top;
+  text-align: left;
+  hyphens: none;
+}
+
+tbody tr:nth-child(even) td { background: #f7f9fc; }
+
+td.centro { text-align: center; white-space: nowrap; }
+
+/* Tabla de datos generales */
+
+.datos td:first-child {
+  width: 46mm;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--azul);
+  background: #f7f9fc;
+}
+
+.datos .num {
+  color: var(--gris-suave);
+  font-weight: 400;
+}
+
+/* Tabla de entregables */
+
+.entregables td:first-child { width: 16mm; }
+.entregables td:nth-child(2) { width: 62mm; }
+
+.oblig {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 7pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--azul);
+  padding: 0.3mm 1.4mm;
+  border-radius: 1mm;
+  vertical-align: 1px;
+}
+
+/* Tabla de repositorio */
+
+.repo td:first-child {
+  width: 34mm;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 8.5pt;
+}
+
+/* ---------- Nota ---------- */
+
+.nota {
+  background: var(--fondo-nota);
+  border-left: 2.5px solid var(--azul);
+  padding: 2.5mm 3.5mm;
+  margin: 3mm 0 4mm 0;
+  font-size: 9pt;
+  color: #33415c;
+  text-align: left;
+  hyphens: none;
+}
+
+.nota p { margin: 0 0 1.5mm 0; }
+.nota p:last-child { margin-bottom: 0; }
+
+.nota .titulo-nota {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--azul);
+}
+
+.pendiente {
+  font-style: italic;
+  color: #7a5a00;
+}
+
+.salto { page-break-before: always; }
+
+/* Encabezados de tabla que no deben partirse */
+.entregables th:first-child,
+.entregables td:first-child { white-space: nowrap; }
+
+/* ---------- Indice ---------- */
+
+.indice { list-style: none; padding: 0; margin: 2mm 0 0 0; }
+.indice li {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 2mm 0;
+  font-size: 10.5pt;
+}
+.indice li.sub { padding-left: 7mm; font-size: 10pt; color: #333; margin-bottom: 1.4mm; }
+.indice .relleno {
+  flex: 1;
+  border-bottom: 1px dotted #9aa3b0;
+  margin: 0 2mm;
+  transform: translateY(-1mm);
+}
+.indice .pag { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+
+.lista-indice-titulo { margin-top: 7mm !important; }
+
+/* ---------- Figuras y pies ---------- */
+
+figure {
+  margin: 4mm 0 5mm 0;
+  page-break-inside: avoid;
+  text-align: center;
+}
+figure svg { max-width: 100%; height: auto; }
+
+figcaption, caption {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8.5pt;
+  color: var(--gris-suave);
+  text-align: left;
+  line-height: 1.4;
+  hyphens: none;
+}
+figcaption { margin-top: 2mm; }
+caption { caption-side: top; padding-bottom: 1.8mm; }
+figcaption b, caption b { color: var(--azul); }
+
+.fuente {
+  font-size: 8pt;
+  color: var(--gris-suave);
+  margin: -2mm 0 4mm 0;
+  text-align: left;
+}
+
+.fase td:first-child { width: 42mm; font-weight: 600; }
+.obj td:first-child { width: 48mm; }
+.inv td:first-child { width: 38mm; }
+.var td:first-child { width: 30mm; font-weight: 600; }
+.meta td:nth-child(3) { width: 34mm; }
+.sin-salto { page-break-inside: avoid; }
+
+.biblio p { padding-left: 10mm; text-indent: -10mm; text-align: left; hyphens: none; }

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Activar una vez por clon: git config core.hooksPath .githooks
+exec python3 scripts/verificar_publicacion.py
